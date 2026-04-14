@@ -22,35 +22,6 @@ This open version is not an officially supported Google product.
     install timesfm==1.3.0` to install an older version of this package to load
     them.
 
-## Update - Mar. 19, 2026
-
-Huge shoutout to [@borealBytes](https://github.com/borealBytes) for adding the support for [AGENTS](https://github.com/google-research/timesfm/blob/master/AGENTS.md)! TimesFM [SKILL.md](https://github.com/google-research/timesfm/tree/master/timesfm-forecasting) is out.
-
-## Update - Oct. 29, 2025
-
-Added back the covariate support through XReg for TimesFM 2.5.
-
-
-## Update - Sept. 15, 2025
-
-TimesFM 2.5 is out!
-
-Comparing to TimesFM 2.0, this new 2.5 model:
-
--   uses 200M parameters, down from 500M.
--   supports up to 16k context length, up from 2048.
--   supports continuous quantile forecast up to 1k horizon via an optional 30M
-    quantile head.
--   gets rid of the `frequency` indicator.
--   has a couple of new forecasting flags.
-
-Along with the model upgrade we have also upgraded the inference API. This repo
-will be under construction over the next few weeks to
-
-1.  add support for an upcoming Flax version of the model (faster inference).
-2.  add back covariate support.
-3.  populate more docstrings, docs and notebook.
-
 ### Install
 
 1.  Clone the repository:
@@ -61,6 +32,9 @@ will be under construction over the next few weeks to
 
 2.  Create a virtual environment and install dependencies using `uv`:
     ```shell
+    # If you don't have 'uv' yet, install it
+    curl -Ls https://astral.sh/uv/install.sh | sh
+    
     # Create a virtual environment
     uv venv
     
@@ -68,12 +42,21 @@ will be under construction over the next few weeks to
     source .venv/bin/activate
     
     # Install the package in editable mode with torch
-    uv pip install -e .[torch]
+    uv pip install -e '.[torch]'
     # Or with flax
-    uv pip install -e .[flax]
+    uv pip install -e '.[flax]'
     # Or XReg is needed
-    uv pip install -e .[xreg]
+    uv pip install -e '.[xreg]'
     ```
+
+3. Update your pip. Install a few more packages/datasets not in the requirements.txt. Create a token through Huggingface and enter it into the terminal when prompted.
+```
+python -m ensurepip --upgrade
+pip install u8darts
+huggingface-cli login
+# Enter your token (input will not be visible): [enter token here]
+# Add token as git credential? (Y/n) [respond with y]
+```
 
 3. [Optional] Install your preferred `torch` / `jax` backend based on your OS and accelerators
 (CPU, GPU, TPU or Apple Silicon).:
@@ -81,6 +64,7 @@ will be under construction over the next few weeks to
 -   [Install PyTorch](https://pytorch.org/get-started/locally/).
 -   [Install Jax](https://docs.jax.dev/en/latest/installation.html#installation)
     for Flax.
+
 
 ### Code Example
 
