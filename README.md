@@ -49,10 +49,13 @@ This open version is not an officially supported Google product.
     uv pip install -e '.[xreg]'
     ```
 
-3. Update your pip. Install a few more packages/datasets not in the requirements.txt. Create a token through Huggingface and enter it into the terminal when prompted.
+3. Update your pip. Install packages from requirements.txt, and a few additional packages/datasets. Create a token through Huggingface and enter it into the terminal when prompted.
 ```
+uv pip compile pyproject.toml -o requirements.txt
+
 python -m ensurepip --upgrade
 pip install u8darts
+
 huggingface-cli login
 # Enter your token (input will not be visible): [enter token here]
 # Add token as git credential? (Y/n) [respond with y]
