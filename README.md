@@ -26,7 +26,7 @@ This open version is not an officially supported Google product.
 
 1.  Clone the repository:
     ```shell
-    git clone https://github.com/google-research/timesfm.git
+    git clone [https://github.com/google-research/timesfm.git](https://github.com/darshansivarajah/timesfm_residual.git)
     cd timesfm
     ```
 
