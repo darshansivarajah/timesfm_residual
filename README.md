@@ -33,7 +33,15 @@ This open version is not an officially supported Google product.
 2.  Create a virtual environment and install dependencies using `uv`:
     ```shell
     # If you don't have 'uv' yet, install it
-    curl -Ls https://astral.sh/uv/install.sh | sh
+    curl -Ls https://astral.sh/uv/install.sh | sh # macOS
+    powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex" # Windows
+
+    # alternatively, if you have Homebrew:
+    brew install uv
+    #or if you have Python
+    pip install uv
+
+    # Restart the terminal
     
     # Create a virtual environment
     uv venv
