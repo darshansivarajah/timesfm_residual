@@ -34,7 +34,8 @@ This open version is not an officially supported Google product.
     uv venv
     
     # Activate the environment
-    source .venv/bin/activate
+    source .venv/bin/activate # macOS
+    .venv\Scripts\activate    # Windows
     
     # Install the package in editable mode with torch
     uv pip install -e '.[torch]'
