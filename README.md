@@ -1,26 +1,13 @@
-# TimesFM
+# TimesFM Residual
 
-TimesFM (Time Series Foundation Model) is a pretrained time-series foundation
-model developed by Google Research for time-series forecasting.
-
-*   Paper:
-    [A decoder-only foundation model for time-series forecasting](https://arxiv.org/abs/2310.10688),
-    ICML 2024.
-*   All checkpoints:
-    [TimesFM Hugging Face Collection](https://huggingface.co/collections/google/timesfm-release-66e4be5fdb56e960c1e482a6).
-*   [Google Research blog](https://research.google/blog/a-decoder-only-foundation-model-for-time-series-forecasting/).
-*   [TimesFM in BigQuery](https://cloud.google.com/bigquery/docs/timesfm-model):
-    an official Google product.
+TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting. This GitHub repository supports our paper that builds on this model, utilizing a residual layer to make more accurate predictions. 
 
 This open version is not an officially supported Google product.
 
-**Latest Model Version:** TimesFM 2.5
+**Model Version Used:** TimesFM 2.5
 
 **Archived Model Versions:**
 
--   1.0 and 2.0: relevant code archived in the sub directory `v1`. You can `pip
-    install timesfm==1.3.0` to install an older version of this package to load
-    them.
 
 ### Install
 
