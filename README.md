@@ -14,7 +14,7 @@ This open version is not an officially supported Google product.
 1.  Clone the repository:
     ```shell
     git clone https://github.com/darshansivarajah/timesfm_residual.git
-    cd timesfm
+    cd timesfm_residual
     ```
 
 2.  Create a virtual environment and install dependencies using `uv`:
@@ -28,7 +28,7 @@ This open version is not an officially supported Google product.
     #or if you have Python
     pip install uv
 
-    # Restart the terminal
+    # Restart the terminal and navigate to the timesfm_residual folder
     
     # Create a virtual environment
     uv venv
@@ -37,7 +37,7 @@ This open version is not an officially supported Google product.
     source .venv/bin/activate # macOS
     .venv\Scripts\activate    # Windows
     
-    # Install the package in editable mode with torch
+    # Install the package in editable mode with torch. If the lines do not run, try without the quotation marks
     uv pip install -e '.[torch]'
     # Or with flax
     uv pip install -e '.[flax]'
