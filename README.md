@@ -46,18 +46,18 @@ This open version is not an officially supported Google product.
     ```
 
 3. Update your pip. Install packages from requirements.txt, and a few additional packages/datasets. Create a token through Huggingface and enter it into the terminal when prompted.
-```
-uv pip compile pyproject.toml -o requirements.txt
+```shell
+    uv pip compile pyproject.toml -o requirements.txt
 
-python -m ensurepip --upgrade
-pip install u8darts
+    python -m ensurepip --upgrade
+    pip install u8darts
 
-# If errors are shown for any packages, use the following code line:
-uv pip install package # replacing package with the relevant package
+    # If errors are shown for any packages, use the following code line:
+    uv pip install package # replacing package with the relevant package
 
-huggingface-cli login
-# Enter your token (input will not be visible): [enter token here]
-# Add token as git credential? (Y/n) [respond with y]
+    huggingface-cli login
+    # Enter your token (input will not be visible): [enter token here]
+    # Add token as git credential? (Y/n) [respond with y]
 ```
 
 3. [Optional] Install your preferred `torch` / `jax` backend based on your OS and accelerators
